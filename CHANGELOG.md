@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [v0.1.2] - 2026-05-23
+
+### Added
+- 添加 quanttide-example-of-devops 子模块（examples/default）
+
 ## [v0.1.1] - 2026-05-23
 
 ### Added
