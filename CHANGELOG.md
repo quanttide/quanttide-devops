@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## [v0.1.1] - 2026-05-23
+
+### Added
+- 添加 quanttide-roadmap-of-devops 子模块
+
+### Docs
+- 添加 release 子命令设计文档
+- 添加 release 生命周期管理蓝图
+
 ## [v0.1.0] - 2026-05-22
 
 ### Added
