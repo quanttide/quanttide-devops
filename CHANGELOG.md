@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [v0.1.3] - 2026-05-24
+
+### Added
+- 添加 quanttide-essay-of-devops 子模块（docs/essay）
+
 ## [v0.1.2] - 2026-05-23
 
 ### Added
