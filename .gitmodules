@@ -13,3 +13,6 @@
 [submodule "docs/essay"]
 	path = docs/essay
 	url = https://github.com/quanttide/quanttide-essay-of-devops.git
+[submodule "docs/report"]
+	path = docs/report
+	url = https://github.com/quanttide/quanttide-report-of-devops.git
