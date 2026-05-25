@@ -22,3 +22,6 @@
 [submodule "docs/journal"]
 	path = docs/journal
 	url = https://github.com/quanttide/quanttide-journal-of-devops.git
+[submodule "examples/code"]
+	path = examples/code
+	url = https://github.com/quanttide/quanttide-laboratory-of-software-engineering.git
