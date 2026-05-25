@@ -16,3 +16,6 @@
 [submodule "docs/report"]
 	path = docs/report
 	url = https://github.com/quanttide/quanttide-report-of-devops.git
+[submodule "docs/brochure"]
+	path = docs/brochure
+	url = https://github.com/quanttide/quanttide-brochure-of-devops.git
