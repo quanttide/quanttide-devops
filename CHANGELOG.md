@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## [v0.2.0] - 2026-05-25
+
+### Added
+- 新增 quanttide-report-of-devops 子模块（docs/report）
+- 新增 quanttide-brochure-of-devops 子模块（docs/brochure）
+- 新增 quanttide-journal-of-devops 子模块（docs/journal）
+
+### Changed
+- 重命名 examples/default 子模块为 quanttide-laboratory-of-devops
+- 移除 examples/code 子模块
+
+### Docs
+- 更新 README 子模块列表
+
 ## [v0.1.4] - 2026-05-24
 
 ### Added
