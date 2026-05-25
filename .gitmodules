@@ -9,7 +9,7 @@
 	url = https://github.com/quanttide/quanttide-roadmap-of-devops.git
 [submodule "examples/default"]
 	path = examples/default
-	url = https://github.com/quanttide/quanttide-example-of-devops.git
+	url = https://github.com/quanttide/quanttide-laboratory-of-devops.git
 [submodule "docs/essay"]
 	path = docs/essay
 	url = https://github.com/quanttide/quanttide-essay-of-devops.git
