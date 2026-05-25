@@ -19,3 +19,6 @@
 [submodule "docs/brochure"]
 	path = docs/brochure
 	url = https://github.com/quanttide/quanttide-brochure-of-devops.git
+[submodule "docs/journal"]
+	path = docs/journal
+	url = https://github.com/quanttide/quanttide-journal-of-devops.git
