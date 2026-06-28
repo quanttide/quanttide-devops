@@ -31,3 +31,6 @@
 [submodule "docs/tutorial"]
 	path = docs/tutorial
 	url = https://github.com/quanttide/quanttide-tutorial-of-devops.git
+[submodule "data/history"]
+	path = data/history
+	url = https://github.com/quanttide/quanttide-history-of-devops.git
