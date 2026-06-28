@@ -40,6 +40,7 @@ data/   → 当数据用的（结构化记录）
 | journal | `data/journal` | 开发日志 |
 | report | `data/report` | 报告 |
 | roadmap | `data/roadmap` | 路线图 |
+| history | `data/history` | 工作历史 |
 
 **子模组操作规范：**
 - 拉取更新：`git submodule update --remote <path>`
