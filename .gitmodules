@@ -4,24 +4,30 @@
 [submodule "packages/toolkit"]
 	path = packages/toolkit
 	url = https://github.com/quanttide/quanttide-devops-toolkit.git
-[submodule "docs/roadmap"]
-	path = docs/roadmap
-	url = https://github.com/quanttide/quanttide-roadmap-of-devops.git
 [submodule "examples/default"]
 	path = examples/default
 	url = https://github.com/quanttide/quanttide-laboratory-of-devops.git
 [submodule "docs/essay"]
 	path = docs/essay
 	url = https://github.com/quanttide/quanttide-essay-of-devops.git
-[submodule "docs/report"]
-	path = docs/report
-	url = https://github.com/quanttide/quanttide-report-of-devops.git
-[submodule "docs/brochure"]
-	path = docs/brochure
-	url = https://github.com/quanttide/quanttide-brochure-of-devops.git
-[submodule "docs/journal"]
-	path = docs/journal
-	url = https://github.com/quanttide/quanttide-journal-of-devops.git
 [submodule "apps/qtadmin"]
 	path = apps/qtadmin
 	url = https://github.com/quanttide/qtadmin.git
+[submodule "data/brochure"]
+	path = data/brochure
+	url = https://github.com/quanttide/quanttide-brochure-of-devops.git
+[submodule "data/journal"]
+	path = data/journal
+	url = https://github.com/quanttide/quanttide-journal-of-devops.git
+[submodule "data/report"]
+	path = data/report
+	url = https://github.com/quanttide/quanttide-report-of-devops.git
+[submodule "data/roadmap"]
+	path = data/roadmap
+	url = https://github.com/quanttide/quanttide-roadmap-of-devops.git
+[submodule "docs/handbook"]
+	path = docs/handbook
+	url = https://github.com/quanttide/quanttide-handbook-of-devops.git
+[submodule "docs/tutorial"]
+	path = docs/tutorial
+	url = https://github.com/quanttide/quanttide-tutorial-of-devops.git
