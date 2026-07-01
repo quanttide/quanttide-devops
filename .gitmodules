@@ -34,3 +34,6 @@
 [submodule "data/history"]
 	path = data/history
 	url = https://github.com/quanttide/quanttide-history-of-devops.git
+[submodule "data/bylaw"]
+	path = data/bylaw
+	url = https://github.com/quanttide/quanttide-bylaw-of-devops.git
