@@ -37,6 +37,7 @@ data/   → 当数据用的（结构化记录）
 | tutorial | `docs/tutorial` | DevOps 教程 |
 | essay | `docs/essay` | 技术随笔 |
 | brochure | `data/brochure` | 宣传册 |
+| bylaw | `data/bylaw` | 章程 |
 | journal | `data/journal` | 开发日志 |
 | report | `data/report` | 报告 |
 | roadmap | `data/roadmap` | 路线图 |
