@@ -20,12 +20,10 @@ scope 对应 `.quanttide/devops/contract.yaml` 中的组件名。无配置时自
 ### 1. 前置检查
 
 ```bash
-qtcloud-devops build status
-qtcloud-devops test status
-qtcloud-devops release status
+qtcloud-devops status
 ```
 
-确认以下全部通过：
+统一 status 按生命周期顺序聚合输出：contract → doctor → plan → code → build → test → release。确认以下全部通过：
 
 - 构建成功
 - 测试全部通过
@@ -43,6 +41,12 @@ qtcloud-devops release publish -v <version> -y
 **所有步骤都是幂等的。** 超时或失败后直接重跑相同的 `publish` 命令，不会产生重复 tag 或 Release。
 
 ### 3. 发布后检查
+
+```bash
+qtcloud-devops status
+```
+
+或只看发布状态：
 
 ```bash
 qtcloud-devops release status
