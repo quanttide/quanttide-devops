@@ -43,3 +43,6 @@
 [submodule "apps/qtcloud"]
 	path = apps/qtcloud
 	url = https://github.com/quanttide/qtcloud.git
+[submodule "data/context"]
+	path = data/context
+	url = https://github.com/quanttide/quanttide-context-of-devops.git

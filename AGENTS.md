@@ -13,6 +13,7 @@ docs/   → 给人读的（文章型文档）
   tutorial/      教程（主题视角：快速入门→Scrum→Git→流水线→制品→OpenAPI→设计开发→CI/CD→发布）
 data/   → 当数据用的（结构化记录）
   brochure/      宣传册
+  context/       上下文
   journal/       日志
   report/        报告
   roadmap/       路线图
@@ -38,6 +39,7 @@ data/   → 当数据用的（结构化记录）
 | essay | `docs/essay` | 技术随笔 |
 | brochure | `data/brochure` | 宣传册 |
 | bylaw | `data/bylaw` | 章程 |
+| context | `data/context` | DevOps 实践上下文 |
 | journal | `data/journal` | 开发日志 |
 | report | `data/report` | 报告 |
 | roadmap | `data/roadmap` | 路线图 |
