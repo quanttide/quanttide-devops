@@ -48,16 +48,6 @@ qtcloud-devops release publish -v <version> -y
 qtcloud-devops release status
 ```
 
-## 预发布版本
-
-先发 rc 等 CI 验证通过，再发正式版：
-
-```bash
-qtcloud-devops release publish -v cli/v0.8.3-rc.1 -y
-# CI 验证通过后
-qtcloud-devops release publish -v cli/v0.8.3 -y
-```
-
 ## 常见问题
 
 ### CI 不触发
