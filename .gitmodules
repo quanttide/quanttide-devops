@@ -40,3 +40,6 @@
 [submodule "docs/specification"]
 	path = docs/specification
 	url = https://github.com/quanttide/quanttide-specification-of-devops.git
+[submodule "apps/qtcloud"]
+	path = apps/qtcloud
+	url = https://github.com/quanttide/qtcloud.git
