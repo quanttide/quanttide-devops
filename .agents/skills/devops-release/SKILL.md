@@ -56,13 +56,24 @@ qtcloud-devops release status
 
 ### CI 不触发
 
-监听 `release: [published]` 事件。如果 tag 已存在，删除 Release 后重跑 `publish` 即可重新触发。
+监听 `release: [published]` 事件。如果 CI 未触发，用 `--force` 重新发布：
+
+```bash
+qtcloud-devops release publish -v cli/v0.8.3 -y -f
+```
+
+`--force` / `-f` 会自动删除已存在的远端 tag 和 GitHub Release，然后重新创建。
 
 ### 版本号冲突需要重新发布
 
+修复代码后，用 `--force` 重新发布：
+
 ```bash
-git push --delete origin cli/v0.8.3       # 删除远端 tag
-gh release delete cli/v0.8.3 --yes        # 删除 GitHub Release
-# 修复代码后
-qtcloud-devops release publish -v cli/v0.8.3 -y
+qtcloud-devops release publish -v cli/v0.8.3 -y -f
 ```
+
+等效于手动执行以下步骤，但一次完成：
+
+- 删除远端 tag（`git push --delete origin cli/v0.8.3`）
+- 删除 GitHub Release（`gh release delete cli/v0.8.3 --yes`）
+- 重新创建 tag、推送、创建 Release
