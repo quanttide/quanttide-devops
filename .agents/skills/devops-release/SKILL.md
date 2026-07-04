@@ -125,3 +125,7 @@ qtcloud-devops release status
 ### major
 
 **AI 不做 major bump。** 涉及 breaking change 或大版本升级，由人类指定版本号。
+
+### 原则
+
+**AI 做判断，人类做决定。** AI 负责常规判断（scope、发不发、minor/patch、预发布序号递增），重大拐点由人类控制（major 版本、正式发版去掉后缀）。不确定时问用户。
