@@ -1,7 +1,7 @@
 [submodule "apps/qtcloud-devops"]
 	path = apps/qtcloud-devops
 	url = https://github.com/quanttide/qtcloud-devops.git
-[submodule "packages/toolkit"]
+[submodule "quanttide-devops-toolkit"]
 	path = packages/toolkit
 	url = https://github.com/quanttide/quanttide-devops-toolkit.git
 [submodule "examples/default"]
