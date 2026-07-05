@@ -10,7 +10,6 @@ description: 量潮 DevOps 测试流程。当用户说"测试"、"跑测试"、"
 | 命令 | 用途 |
 |------|------|
 | `qtcloud-devops test status` | 查看测试状态（通过数、失败数、覆盖率） |
-| `qtcloud-devops test run` | 运行测试 + 生成覆盖率报告 |
 | `qtcloud-devops build status` | 查看构建状态（编译、依赖、版本一致性） |
 | `qtcloud-devops doctor status` | 检查开发工具链（git/gh/cargo/python 等） |
 | `qtcloud-devops status` | 聚合概览：contract → doctor → plan → code → build → test → release |
@@ -27,11 +26,7 @@ qtcloud-devops doctor status
 
 ### 2. 运行测试
 
-```bash
-qtcloud-devops test run
-```
-
-自动按 scope 执行对应语言的测试命令：
+手动执行对应语言的测试和覆盖率命令：
 
 | 语言 | 测试命令 | 覆盖率命令 |
 |------|---------|-----------|
@@ -121,14 +116,14 @@ pub fn status_to(writer: &mut impl Write) -> io::Result<()> {
 # 本地生成覆盖率报告查看详情
 cargo llvm-cov --lcov --output-path target/coverage/lcov.info
 # 检查哪些模块未覆盖
-# 补测试后重新运行
-qtcloud-devops test run
+# 补测试后重新运行测试和覆盖率
+cargo test && cargo llvm-cov --lcov
 qtcloud-devops test status
 ```
 
 ### 测试失败
 
-`test run` 失败时会中断，不会继续生成覆盖率。先修复测试，再重新运行。
+测试失败时先修复再重新运行。`cargo test` 失败会中断，不会生成覆盖率报告。
 
 ### CI 测试失败
 
