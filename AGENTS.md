@@ -9,6 +9,7 @@
 ```
 docs/   → 给人读的（文章型文档）
   essay/         随笔
+  gallery/       案例
   handbook/      手册（生命周期视角：规划→编码→构建→测试→发布→部署→运维→监控）
   tutorial/      教程（主题视角：快速入门→Scrum→Git→流水线→制品→OpenAPI→设计开发→CI/CD→发布）
 data/   → 当数据用的（结构化记录）
@@ -34,6 +35,7 @@ data/   → 当数据用的（结构化记录）
 | qtadmin | `apps/qtadmin` | 量潮管理后台 |
 | devops-toolkit | `packages/toolkit` | DevOps 工具包 SDK |
 | laboratory | `examples/default` | 实验室 |
+| gallery | `docs/gallery` | 量潮 DevOps 案例 |
 | handbook | `docs/handbook` | DevOps 实践手册 |
 | tutorial | `docs/tutorial` | DevOps 教程 |
 | essay | `docs/essay` | 技术随笔 |

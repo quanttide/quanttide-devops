@@ -46,3 +46,6 @@
 [submodule "data/context"]
 	path = data/context
 	url = https://github.com/quanttide/quanttide-context-of-devops.git
+[submodule "docs/gallery"]
+	path = docs/gallery
+	url = https://github.com/quanttide/quanttide-gallery-of-devops.git
