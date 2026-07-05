@@ -37,7 +37,7 @@ data/   → 当数据用的（结构化记录）
 |--------|------|------|
 | qtcloud-devops | `apps/qtcloud-devops` | DevOps CLI 工具 |
 | qtadmin | `apps/qtadmin` | 量潮管理后台 |
-| devops-toolkit | `packages/toolkit` | DevOps 工具包 SDK |
+| devops-toolkit | `packages/quanttide-devops-toolkit` | DevOps 工具包 SDK |
 | laboratory | `examples/default` | 实验室 |
 | gallery | `docs/gallery` | 量潮 DevOps 案例 |
 | handbook | `docs/handbook` | DevOps 实践手册 |
