@@ -12,9 +12,12 @@ docs/   → 给人读的（文章型文档）
   gallery/       案例（做成了什么的实证陈列）
   handbook/      手册（生命周期视角：规划→编码→构建→测试→发布→部署→运维→监控）
   tutorial/      教程（主题视角：快速入门→Scrum→Git→流水线→制品→OpenAPI→设计开发→CI/CD→发布）
+  bylaw/         章程（制度性约定）
+  specification/ 标准（技术规范）
 data/   → 当数据用的（结构化记录）
   brochure/      宣传册
   context/       上下文
+  history/       工作历史
   journal/       日志
   report/        报告
   roadmap/       路线图
