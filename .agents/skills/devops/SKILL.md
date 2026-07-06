@@ -22,8 +22,8 @@ status（看数据）→ audit（对照标准做评价）→ 分发到子 skill�
 | `qtcloud-devops status` | 聚合概览：contract → doctor → plan → code → build → test → release |
 | `qtcloud-devops doctor status` | 系统诊断：检查 git/gh/cargo/python 等工具链 |
 | `qtcloud-devops code status` | 查看组件同步状态 |
-| `qtcloud-devops plan status [scope]` | 查看 ROADMAP 规划进度 |
 | `qtcloud-devops build status` | 查看构建状态 |
+| `qtcloud-devops plan status [scope]` | 查看 ROADMAP 规划进度 |
 | `qtcloud-devops test status` | 查看测试状态和覆盖率 |
 | `qtcloud-devops release status` | 查看发布状态（tag、CHANGELOG、GitHub Release） |
 
@@ -68,6 +68,8 @@ status（看数据）→ audit（对照标准做评价）→ 分发到子 skill�
 | `devops-test` | 测试、覆盖率、CI 失败 | 测试运行、覆盖率检查、环境诊断 |
 | `devops-release` | 发布、发版、bump、tag | 版本号审议、publish、CHANGELOG、GitHub Release |
 | `devops-code` | 组件、子模块、同步 | 组件同步状态查看和同步操作 |
+| `devops-build` | 构建、build、编译 | 构建状态查看 |
+| `devops-plan` | 规划、进度、ROADMAP | ROADMAP 查看/清理/修复/写入 |
 
 ## 路由规则
 
