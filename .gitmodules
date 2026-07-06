@@ -49,3 +49,6 @@
 [submodule "docs/gallery"]
 	path = docs/gallery
 	url = https://github.com/quanttide/quanttide-gallery-of-devops.git
+[submodule "apps/qtcloud-code"]
+	path = apps/qtcloud-code
+	url = https://github.com/quanttide/qtcloud-code.git
