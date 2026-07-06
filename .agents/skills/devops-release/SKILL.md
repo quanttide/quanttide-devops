@@ -13,12 +13,21 @@ description: 量潮 DevOps 包发布流程。当用户说"发布"、"发版"、"
 qtcloud-devops status
 ```
 
-统一 status 按生命周期顺序聚合输出：contract → doctor → plan → code → build → test → release。确认以下全部通过：
+统一 status 按生命周期顺序聚合输出：contract → source → plan → code → build → test → release。确认以下全部通过：
 
 - 构建成功
 - 测试全部通过
 - 版本一致（配置文件版本与最新 tag 一致）
 - 工作区干净
+
+### 发布前审计
+
+```bash
+qtcloud-devops release audit -v <version>
+```
+
+审计 6+1 项：版本号格式、配置文件版本一致性、CHANGELOG、工作区状态、标签冲突、远程可达性、GitHub Release 同步。
+全部通过后再发布。
 
 ### 预览版本号
 

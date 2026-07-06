@@ -19,8 +19,8 @@ status（看数据）→ audit（对照标准做评价）→ 分发到子 skill�
 
 | 命令 | 用途 |
 |------|------|
-| `qtcloud-devops status` | 聚合概览：contract → doctor → plan → code → build → test → release |
-| `qtcloud-devops doctor status` | 系统诊断：检查 git/gh/cargo/python 等工具链 |
+| `qtcloud-devops status` | 聚合概览：contract → source → plan → code → build → test → release |
+| `qtcloud-devops source status` | 系统诊断：检查 git/gh/cargo/python 等工具链 |
 | `qtcloud-devops code status` | 查看组件同步状态 |
 | `qtcloud-devops build status` | 查看构建状态 |
 | `qtcloud-devops plan status [scope]` | 查看 ROADMAP 规划进度 |
@@ -29,8 +29,7 @@ status（看数据）→ audit（对照标准做评价）→ 分发到子 skill�
 
 ## audit — 做评价
 
-> CLI 暂无 `audit` 命令。audit 是 AI agent 拿到 status 数据后，对照以下标准做人工评审。
-> status 和 audit 都在演化中，数据维度和 checklist 会随评审经验积累持续补充。
+> CLI 已提供 `audit` 命令。audit 是对照以下标准做评审，输出 ✅/❌。
 
 ### 指标基线
 
@@ -64,12 +63,11 @@ status（看数据）→ audit（对照标准做评价）→ 分发到子 skill�
 
 | Skill | 触发词 | 覆盖范围 |
 |-------|--------|---------|
-| `devops-plan` | 规划、进度、ROADMAP | ROADMAP 查看/清理/修复/写入 |
-| `devops-test` | 测试、覆盖率、CI 失败 | 测试运行、覆盖率检查、环境诊断 |
-| `devops-release` | 发布、发版、bump、tag | 版本号审议、publish、CHANGELOG、GitHub Release |
-| `devops-code` | 组件、子模块、同步 | 组件同步状态查看和同步操作 |
-| `devops-build` | 构建、build、编译 | 构建状态查看 |
-| `devops-plan` | 规划、进度、ROADMAP | ROADMAP 查看/清理/修复/写入 |
+| `devops-code` | 组件、子模块、同步 | 组件同步状态查看和代码审计 |
+| `devops-build` | 构建、build、编译 | 构建状态查看/清理/审计 |
+| `devops-plan` | 规划、进度、ROADMAP | ROADMAP 查看/清理/编辑/审计 |
+| `devops-test` | 测试、覆盖率、CI 失败 | 测试状态查看/清理/审计 |
+| `devops-release` | 发布、发版、bump、tag | 版本号审议、publish 审计、CHANGELOG、GitHub Release |
 
 ## 路由规则
 
