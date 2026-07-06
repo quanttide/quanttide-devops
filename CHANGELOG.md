@@ -1,5 +1,34 @@
 # CHANGELOG
 
+
+## [0.2.2] - 2026-07-06
+
+### Added
+
+1. 新增 `qtcloud-code` 子模块，纳入应用层管理。  
+2. 增加 `devops`、`devops-build`、`devops-code` 等多个 SKILL 文件，完善 CLI 生命周期、评审标准及架构原则。  
+3. 在文档中新增 `report/` 原则和自我引导规范。
+
+### Changed
+
+1. 更新多个子模块（`qtcloud-devops`、`toolkit`、`qtadmin`、`lab`、`data/report` 等）至较新版本，同步指针并移除冗余内容。  
+2. 重写并调整 `devops` 技能文档：整合命令路由与评审标准，调整流程顺序（`doctor`→`clean`），区分 `status` 与 `audit`。  
+3. 统一文档标题：将“工具箱”重命名为“第二大脑”，`toolkit` 重命名为“工具箱”。  
+4. 重构 `AGENTS.md`：移动子模块列表到 `CONTRIBUTING`，重写自举规则，替换命令列表为帮助提示。  
+5. 将 CLI 技能同步至 v0.10.0-beta.2（`doctor`→`source`，新增 `audit`、`clean`，`doctor`→`edit`）。
+
+### Fixed
+
+1. 修复 `qtcloud-devops` 子模块的 CI 编译错误。  
+2. 修复 `qtcloud-devops` 子模块的 registry 依赖问题。  
+3. 修复 `qtcloud-devops` 子模块中 `python.rs` 的相关错误。  
+4. 修正 `AGENTS.md` 中 `report/` 的描述。
+
+### Removed
+
+1. 移除 `ROADMAP.md` 及依赖真实 ROADMAP 的集成测试。  
+2. 清理 `qtcloud-devops` 子模块中的热点文档（hotspots）。  
+3. 移除已推进到平台的重复代码（如 `examples/default` 中的 `detect` 等）。
 ## [0.2.1] - 2026-07-05
 
 ### Added
