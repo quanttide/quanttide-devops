@@ -63,7 +63,7 @@ data/   → 当数据用的（结构化记录）
 
 **必须使用 devops skill 或 `qtcloud-devops` CLI 自举管理 DevOps 活动。**
 
-禁止绕开工具直接执行 git 命令、手动创建 tag 或 GitHub Release。
+遵守已定义的范围划分，所有 DevOps 操作通过工具闭环，不绕开工具手动执行。
 
 使用 `qtcloud-devops help` 学习命令，不在此处列举。
 
