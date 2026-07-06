@@ -56,4 +56,18 @@ data/   → 当数据用的（结构化记录）
 **子模组操作规范：**
 - 拉取更新：`git submodule update --remote <path>`
 - 修改子模组：进入子模组目录提交后，回到主仓库更新引用
-- 初始化克隆：`git clone --recurse-submodules <repo-url>"`
+- 初始化克隆：`git clone --recurse-submodules <repo-url>`
+
+## 工作纪律
+
+**必须使用 devops skill 或 `qtcloud-devops` CLI 自举管理 DevOps 活动。**
+
+禁止绕开工具直接执行 git 命令、手动创建 tag 或 GitHub Release。
+
+包括但不限于：
+- 发布版本 → 使用 `qtcloud-devops release publish`
+- 查看子模块同步状态 → 使用 `qtcloud-devops code status`
+- 代码审计 → 使用 `qtcloud-devops code audit`
+- 规划管理 → 使用 `qtcloud-devops plan`
+
+tool 不满足需求时，先扩展 tool，再通过 tool 执行。
