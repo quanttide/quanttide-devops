@@ -58,3 +58,6 @@
 [submodule "data/insight"]
 	path = data/insight
 	url = https://github.com/quanttide/quanttide-insight-of-devops.git
+[submodule "data/archive"]
+	path = data/archive
+	url = https://github.com/quanttide/quanttide-archive-of-devops.git
