@@ -18,6 +18,8 @@ data/   → 当数据用的（结构化记录）
   brochure/      宣传册
   context/       上下文
   history/       工作历史
+  insight/       洞察
+  intention/     意图
   journal/       日志
   report/        报告
   roadmap/       路线图
