@@ -13,10 +13,10 @@ description: 量潮 DevOps 规划管理。当用户说"规划"、"roadmap"、"�
 |------|------|
 | `qtcloud-devops plan status [scope]` | 查看 scope 规划进度 |
 | `qtcloud-devops plan audit` | 审计 ROADMAP 与 TODO 的一致性 |
-| `qtcloud-devops plan edit [scope]` | 编辑 scope ROADMAP：读取原始格式 → 标准化 → 写回 |
+| `qtcloud-devops plan doctor [scope]` | 修复 ROADMAP 和 TODO 的格式：标准化版本头、分类、checkbox |
 | `qtcloud-devops plan clean [scope]` | 删除 scope 已完成条目（级联清理空分类和空版本） |
 
-`plan status/audit` 是读操作，`plan edit/clean` 是写入操作。
+`plan status/audit` 是读操作，`plan doctor/clean` 是写入操作。
 
 ## ROADMAP.md 格式
 
@@ -74,7 +74,7 @@ qtcloud-devops plan audit
 ### 3. 修复格式（仅在 status 异常时）
 
 ```bash
-qtcloud-devops plan edit [scope]
+qtcloud-devops plan doctor [scope]
 ```
 
 两阶段修复：
@@ -123,7 +123,7 @@ git commit -m "docs: 更新 ROADMAP 规划"
 qtcloud-devops plan status
 
 # 输出异常 → 2. 修复格式
-qtcloud-devops plan edit
+qtcloud-devops plan doctor
 qtcloud-devops plan status   # 确认修复结果
 
 # 3. 清理已完成条目
@@ -148,7 +148,7 @@ git commit -m "docs: 更新 ROADMAP 规划至 v0.3.0"
 ### plan status 显示"未找到标准规划条目"
 
 ROADMAP.md 使用了非标准格式（如无 `# ROADMAP` 标题或自定义版本头）。
-先 `plan edit` 通过 LLM 自动转换，再 `plan status` 确认。
+先 `plan doctor` 通过 LLM 自动转换，再 `plan status` 确认。
 
 ### plan clean 删多了怎么办
 
