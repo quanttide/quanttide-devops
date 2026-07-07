@@ -15,6 +15,7 @@ docs/   → 给人读的（文章型文档）
   bylaw/         章程（制度性约定）
   specification/ 标准（技术规范）
 data/   → 当数据用的（结构化记录）
+  archive/       归档站
   brochure/      宣传册
   context/       上下文
   history/       工作历史
