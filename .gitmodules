@@ -61,3 +61,6 @@
 [submodule "data/archive"]
 	path = data/archive
 	url = https://github.com/quanttide/quanttide-archive-of-devops.git
+[submodule "data/profile"]
+	path = data/profile
+	url = https://github.com/quanttide/quanttide-profile-of-devops.git
