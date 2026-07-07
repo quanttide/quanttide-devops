@@ -1,6 +1,19 @@
 # CHANGELOG
 
 
+
+## [0.2.3] - 2026-07-07
+
+### Added
+
+- 新增 data/intention 子模块，用于工作意图管理  
+- 新增 code-review skill，支持 qtcloud-code review  
+
+### Changed
+
+- 更新多个子模块（qtcloud-devops、docs/handbook、tutorial、journal、qtcloud-code、toolkit）至最新版本，优化路线图、计划文档及审计工具  
+- 重构 plan edit 为 plan doctor，并更新相关技能文档  
+- 从 CLI 和 toolkit 路线图中移除 unwrap 检查
 ## [0.2.2] - 2026-07-06
 
 ### Added
