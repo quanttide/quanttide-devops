@@ -37,6 +37,12 @@ data/   → 当数据用的（结构化记录）
 
 子模组列表和操作规范见 `CONTRIBUTING.md`。
 
+## 初始化上下文
+
+每次会话启动时，自动读取最近 3 天的 Human 日志和 Agent 日志（`data/journal/human/` 和 `data/journal/agent/`），以恢复工作上下文。
+
+日志文件按日期命名（如 `2026-07-07.md`），按文件名排序取最近 3 份。
+
 ## 工作纪律
 
 **必须使用 devops skill 或 `qtcloud-devops` CLI 自举管理 DevOps 活动。**
