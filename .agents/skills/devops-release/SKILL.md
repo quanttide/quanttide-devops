@@ -5,6 +5,20 @@ description: 量潮 DevOps 包发布流程。当用户说"发布"、"发版"、"
 
 # devops-release — 量潮 DevOps 包发布流程
 
+## 架构概要
+
+`qtcloud-devops release publish` 采用三阶段架构：
+
+```
+Phase 1: Plan（只读）  →  Phase 2: Confirm  →  Phase 3: Execute（只写）
+```
+
+- **Plan 阶段**：只读计算（版本号解析、配置文件 diff、CHANGELOG 内容生成、lockfile 需求判断），不写盘、不调 LLM
+- **Confirm 阶段**：展示计划给用户，确认后才进入 Execute
+- **Execute 阶段**：所有写操作集中在此（写文件、git add/commit、tag、push、GitHub Release）
+
+`publish` 命令自动在发布前后各执行一次 `release status`，展示发布前后状态变化。
+
 ## 流程
 
 ### 前置检查
@@ -26,27 +40,16 @@ qtcloud-devops status
 qtcloud-devops release audit -v <version>
 ```
 
-审计 6+1 项：版本号格式、配置文件版本一致性、CHANGELOG、工作区状态、标签冲突、远程可达性、GitHub Release 同步。
+审计 7 项：版本号格式、配置文件版本一致性、CHANGELOG、工作区状态、标签冲突、远程可达性、GitHub Release 同步。
 全部通过后再发布。
 
-### 预览版本号
-
-先使用 `--dry-run` 预览自动检测的结果，AI 对其进行审议：
+### 预览发布计划
 
 ```bash
-qtcloud-devops release publish --dry-run
-# 📌 项目类型: code
-# 📌 scope: Some("cli")
-# 📦 最新标签: cli/v0.9.3-alpha.1
-# 📝 提交数: 1
-#    • feat: release publish -v optional with auto-detect
-# 🧠 LLM 决策: feat 变更属于 minor，当前 alpha 阶段递增
-# 🔮 建议版本: cli/v0.9.3-alpha.2
+qtcloud-devops release publish -v <version> --dry-run
 ```
 
-### 审议版本号
-
-AI 审阅 `--dry-run` 的输出，对照[版本号规则](#版本号规则)逐一核查：
+`--dry-run` 输出概要（因 Plan 阶段不调 LLM，所以不显示详细 CHANGELOG 内容）。AI 对照[版本号规则](#版本号规则)逐一审议：
 
 1. **项目类型** — code/docs 是否正确？
 2. **scope** — 是否正确匹配了变更目录？
@@ -63,9 +66,24 @@ AI 审阅 `--dry-run` 的输出，对照[版本号规则](#版本号规则)逐�
 qtcloud-devops release publish -v <version> -y
 ```
 
-`release publish` 内部自动完成：更新配置文件版本 → 生成 CHANGELOG → 创建 tag → 推送 → 创建 GitHub Release。
+发布流程自动完成：
+
+1. **release status** — 展示发布前状态
+2. **Plan（只读）** — 计算配置文件 diff、CHANGELOG 内容、lockfile 需求
+3. **validate_plan** — 检查配置一致性、CHANGELOG 完整性、tag 冲突（警告不阻断）
+4. **print_plan** — 展示详细计划（配置文件变更、CHANGELOG 预览、Cargo.lock 需求）
+5. **Confirm** — 用户确认（`-y` 跳过）
+6. **Execute（只写）** — 写配置文件 → 同步 Cargo.lock（比较变更前后，无变化跳过）→ 写 CHANGELOG → git add + commit → git tag → push → GitHub Release
+7. **release status** — 展示发布后状态
 
 **所有步骤都是幂等的。** 超时或失败后直接重跑相同的 `publish` 命令，不会产生重复 tag 或 Release。
+
+**注意：** Cargo.lock 在 `cargo generate-lockfile` 后可能有变更。发布完成后检查 Cargo.lock 是否需要提交：
+
+```bash
+git status src/cli/Cargo.lock   # 检查是否有未提交的 Cargo.lock
+git add src/cli/Cargo.lock && git commit -m "chore: sync Cargo.lock"
+```
 
 #### tag 或 Release 已存在（重新发布）
 
