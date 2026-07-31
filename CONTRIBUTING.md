@@ -8,8 +8,6 @@
 |--------|------|------|
 | qtcloud-devops | `apps/qtcloud-devops` | DevOps CLI 工具 |
 | qtcloud | `apps/qtcloud` | 量潮云平台 |
-
-| qtadmin | `apps/qtadmin` | 量潮管理后台 |
 | devops-toolkit | `packages/quanttide-devops-toolkit` | DevOps 工具包 SDK |
 | laboratory | `examples/default` | 实验室 |
 | gallery | `docs/gallery` | 量潮 DevOps 案例 |

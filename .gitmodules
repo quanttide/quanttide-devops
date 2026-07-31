@@ -10,9 +10,6 @@
 [submodule "docs/essay"]
 	path = docs/essay
 	url = https://github.com/quanttide/quanttide-essay-of-devops.git
-[submodule "apps/qtadmin"]
-	path = apps/qtadmin
-	url = https://github.com/quanttide/qtadmin.git
 [submodule "data/brochure"]
 	path = data/brochure
 	url = https://github.com/quanttide/quanttide-brochure-of-devops.git
