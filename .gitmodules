@@ -4,9 +4,9 @@
 [submodule "quanttide-devops-toolkit"]
 	path = packages/quanttide-devops-toolkit
 	url = https://github.com/quanttide/quanttide-devops-toolkit.git
-[submodule "examples/default"]
-	path = examples/default
-	url = https://github.com/quanttide/quanttide-laboratory-of-devops.git
+[submodule "examples/quanttide-devops-lab"]
+	path = examples/quanttide-devops-lab
+	url = https://github.com/quanttide/quanttide-devops-lab.git
 [submodule "docs/essay"]
 	path = docs/essay
 	url = https://github.com/quanttide/quanttide-essay-of-devops.git
