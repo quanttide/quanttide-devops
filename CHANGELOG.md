@@ -1,6 +1,12 @@
 # CHANGELOG
 
+## [Unreleased]
 
+### Changed
+
+- 生命周期「开发」阶段名由 `code` 改为 `develop`，与 `quanttide-code`（软件工程）区分：手册 `stage/code.md` 更名为 `stage/develop.md`，生命周期索引、站内链接、`myst.yml` 目录与意图仓的阶段表同步
+- 命令改名 `code` → `develop` 未随本次实施，单独排期：已在 `qtcloud-devops` 的 `src/cli/ROADMAP.md` 立项（`[0.13.0]`，破坏性），当前命令仍为 `code`
+- 顺带更新 `apps/qtcloud-devops` 指针至 `37171ee`（含远端两项 `rustfmt` 与测试去环境依赖的提交）
 
 ## [0.2.3] - 2026-07-07
 
